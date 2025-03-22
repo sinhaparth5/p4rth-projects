@@ -1,7 +1,6 @@
 <script lang="ts">
     import BackgroundBoxes from '../../../components/boxes.svelte';
     import styles from '../../../lib/css/components.module.css'
-    import AIGirl from '../../../lib/img/ai-generated-girl.webp';
 </script>
 
 <main>
