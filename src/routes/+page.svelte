@@ -1,4 +1,3 @@
-<!-- App.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
     import type { Project, Particle } from '../lib/types/types';
