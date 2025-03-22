@@ -1,24 +1,70 @@
 <script lang="ts">
     import BackgroundBoxes from '../../../components/boxes.svelte';
     import styles from '../../../lib/css/components.module.css';
-</script>
+    import Sidebar from '../../../components/Sidebar.svelte';
+    import HamburgerMenu from '../../../components/HamburgerMenu.svelte';
+    import { onMount } from 'svelte';
 
+    // Mobile menu state
+    let isMobileMenuOpen = false;
+    
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        isMobileMenuOpen = !isMobileMenuOpen;
+    }
+    
+    // Close mobile menu 
+    function closeMobileMenu() {
+        isMobileMenuOpen = false;
+    }
+    
+    // Close mobile menu when clicking outside
+    function handleClickOutside(event: MouseEvent) {
+        const target = event.target as Element;
+        if (isMobileMenuOpen && 
+            !target.closest('.sidebar') && 
+            !target.closest('.hamburger-menu')) {
+            isMobileMenuOpen = false;
+        }
+    }
+    
+    onMount(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    });
+</script>
+<div class="layout " class:menu-open={isMobileMenuOpen}>
+    <!-- Hamburger menu button (mobile only) -->
+    <HamburgerMenu isOpen={isMobileMenuOpen} on:click={toggleMobileMenu} />
+    
+    <!-- Overlay for mobile menu -->
+    {#if isMobileMenuOpen}
+        <div class="mobile-overlay" on:click={closeMobileMenu}></div>
+    {/if}
+    
+    <!-- Sidebar component -->
+    <Sidebar 
+        isMobileMenuOpen={isMobileMenuOpen} 
+        on:closemenu={closeMobileMenu} 
+    />
 <main>
     <BackgroundBoxes />
-        <article class="blog-post">
+        <article class={styles.blogPost}>
             <h1>The Future of Technology</h1>
             
-            <div class="post-meta">
+            <div class={styles.postMeta}>
                 <span class="date">March 22, 2025</span>
                 <span class="author">By Tech Explorer</span>
                 <span class="category">Innovation</span>
             </div>
             
-            <div class="post-content">
+            <div class={styles.postContent}>
                 <enhanced:img 
                     src="../../../lib/img/ai-generated-girl.webp" 
                     alt="AI Generated Image" 
-                    class="float-image"
+                    class={styles.floatImage}
                 />
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porta malesuada eros, eget luctus ipsum. Nam et sem id nulla fringilla dapibus. Nullam ultrices nisl risus, in viverra libero egestas sit amet.</p>
@@ -35,65 +81,4 @@
             </div>
         </article>
 </main>
-
-<style>
-    .blog-post {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-        line-height: 1.6;
-    }
-    
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-    
-    .post-meta {
-        display: flex;
-        gap: 1.5rem;
-        font-size: 0.9rem;
-        color: #777;
-        margin-bottom: 2rem;
-        border-bottom: 1px solid #eaeaea;
-        padding-bottom: 1rem;
-    }
-    
-    .post-content {
-        font-size: 1.1rem;
-    }
-    
-    .float-image {
-        float: left;
-        width: 300px;
-        height: auto;
-        margin: 0 2rem 1rem 0;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    
-    p {
-        margin-bottom: 1.5rem;
-    }
-    
-    @media (max-width: 768px) {
-        .float-image {
-            float: none;
-            display: block;
-            width: 100%;
-            margin: 0 0 2rem 0;
-        }
-        
-        .blog-post {
-            padding: 1.5rem;
-        }
-    }
-    
-    @media (prefers-color-scheme: dark) {
-        .post-meta {
-            color: #aaa;
-            border-bottom-color: #333;
-        }
-    }
-</style>
+</div>
