@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Portfolio Website",
       "description": "A responsive portfolio website built with Svelte and CSS modules.",
-      "image": "https://r2.astrareconslabs.com/anime-9063542_640.png",
+      "image": "https://r2.astrareconslabs.com/ai-generated-8094691_640.webp",
       "tags": ["Svelte", "CSS Modules", "Responsive"],
       "link": "#"
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "title": "E-commerce Dashboard",
       "description": "Admin dashboard for managing products, orders, and customers.",
-      "image": "/api/placeholder/600/400",
+      "image": "https://r2.astrareconslabs.com/ai-generated-8750176_640.webp",
       "tags": ["Svelte", "Chart.js", "Firebase"],
       "link": "#"
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "title": "Weather App",
       "description": "Real-time weather application with location-based forecasts.",
-      "image": "/api/placeholder/600/400",
+      "image": "https://r2.astrareconslabs.com/anime-8648011_640.webp",
       "tags": ["Svelte", "API Integration", "Geolocation"],
       "link": "#"
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "title": "Task Management Tool",
       "description": "Productivity application for organizing tasks and projects.",
-      "image": "/api/placeholder/600/400",
+      "image": "https://r2.astrareconslabs.com/girl-8435339_640.webp",
       "tags": ["Svelte", "Local Storage", "Drag and Drop"],
       "link": "#"
     }
