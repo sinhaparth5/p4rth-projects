@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Portfolio Website",
       "description": "A responsive portfolio website built with Svelte and CSS modules.",
-      "image": "/api/placeholder/600/400",
+      "image": "https://r2.astrareconslabs.com/anime-9063542_640.png",
       "tags": ["Svelte", "CSS Modules", "Responsive"],
       "link": "#"
     },
