@@ -5,7 +5,7 @@
       "description": "A responsive portfolio website built with Svelte and CSS modules.",
       "image": "https://r2.astrareconslabs.com/ai-generated-8094691_640.webp",
       "tags": ["Svelte", "CSS Modules", "Responsive"],
-      "link": "#"
+      "link": "portfolio-website"
     },
     {
       "id": 2,

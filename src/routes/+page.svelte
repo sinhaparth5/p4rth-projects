@@ -150,7 +150,7 @@
                   <span class={styles.tag}>{tag}</span>
                 {/each}
               </div>
-              <a href={project.link} class={styles.projectLink}>
+              <a href="/project/{project.link}" class={styles.projectLink}>
                 View Project 
                 <span class={styles.arrowIcon}>→</span>
               </a>
