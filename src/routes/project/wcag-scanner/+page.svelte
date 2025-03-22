@@ -40,7 +40,7 @@
 
 <style>
     .blog-post {
-        max-width: 800px;
+        max-width: 1280px;
         margin: 0 auto;
         padding: 2rem;
         line-height: 1.6;
