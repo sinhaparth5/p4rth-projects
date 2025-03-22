@@ -5,7 +5,6 @@
 
 <main>
     <BackgroundBoxes />
-    <div class={styles.content}>
         <article class="blog-post">
             <h1>The Future of Technology</h1>
             
@@ -35,7 +34,6 @@
                 <p>Praesent augue urna, facilisis ac dapibus vel, commodo et lacus. Aenean in fermentum metus. Cras sed auctor sem. Nullam lobortis magna quis consequat ultrices. Donec consectetur lobortis sapien, at interdum sapien ornare in. Aenean a arcu ullamcorper, porta lorem eget, dignissim magna.</p>
             </div>
         </article>
-    </div>
 </main>
 
 <style>
