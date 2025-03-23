@@ -10,7 +10,7 @@
 
 <style>
     .hamburger-menu {
-        display: none;
+        display: flex; /* Always show, not just on mobile */
         position: fixed;
         top: 20px;
         left: 20px;
@@ -45,11 +45,5 @@
     
     .open .hamburger-line:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
-    }
-    
-    @media (max-width: 768px) {
-        .hamburger-menu {
-            display: flex;
-        }
     }
 </style>

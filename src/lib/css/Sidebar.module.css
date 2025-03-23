@@ -41,8 +41,6 @@
     font-weight: 600;
 }
 
-@media screen and (max-width: 768px) {
-    .navMainSection {
-        margin-top: 2.5rem;
-    }    
-}
+.navMainSection {
+    margin-top: 2.5rem;
+}    

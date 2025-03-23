@@ -82,3 +82,31 @@
         </article>
 </main>
 </div>
+<style>
+    .layout {
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    .main-content {
+        width: 100%;
+        /* No margin-left */
+    }
+    
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 90;
+    }
+    
+    /* Show overlay when menu is open */
+    .menu-open .mobile-overlay {
+        display: block;
+    }
+
+</style>

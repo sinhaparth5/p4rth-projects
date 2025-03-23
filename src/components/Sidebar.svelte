@@ -56,7 +56,7 @@
 
 <style>
     .sidebar {
-        width: 250px;
+        width: 280px;
         background-color: rgba(25, 25, 30, 0.9);
         color: #fff;
         padding: 2rem 0;
@@ -65,23 +65,13 @@
         overflow-y: auto;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         z-index: 100;
-    }
-    /* Responsive styles */
-    @media (max-width: 900px) {
-        .sidebar {
-            width: 200px;
-        }
+        /* Start with sidebar hidden by default */
+        left: -100%;
+        transition: left 0.3s ease;
     }
     
-    @media (max-width: 768px) {
-        .sidebar {
-            width: 280px;
-            left: -100%;
-            transition: left 0.3s ease;
-        }
-        
-        .sidebar.open {
-            left: 0;
-        }
+    /* When open, show it */
+    .sidebar.open {
+        left: 0;
     }
 </style>
