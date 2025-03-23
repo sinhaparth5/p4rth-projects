@@ -1,6 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { onMount, createEventDispatcher } from 'svelte';
+    import styles from '../lib/css/Sidebar.module.css';
     
     // Props
     export let isMobileMenuOpen = false;
@@ -23,25 +24,25 @@
 </script>
 
 <aside class="sidebar" class:open={isMobileMenuOpen}>
-    <nav>
-        <div class="nav-section">
+    <nav class={styles.navMainSection}>
+        <div class={styles.navSection}>
             <a 
                 href="/" 
-                class="nav-link home-link {$page.url.pathname === '/' ? 'active' : ''}"
+                class="{styles.navLink} {styles.homeLink} {$page.url.pathname === '/' ? styles.active : ''}"
                 on:click={handleLinkClick}
             >
                 Home
             </a>
         </div>
         
-        <div class="nav-section">
+        <div class={styles.navSection}>
             <h3>Projects</h3>
-            <ul class="projects-list">
+            <ul class={styles.projectsList}>
                 {#each projects as project}
                     <li>
                         <a 
                             href="/project/{project.slug}" 
-                            class="nav-link {$page.url.pathname === `/project/${project.slug}` ? 'active' : ''}"
+                            class="{styles.navLink} {$page.url.pathname === `/project/${project.slug}` ? styles.active : ''}"
                             on:click={handleLinkClick}
                         >
                             {project.name}
@@ -65,50 +66,6 @@
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         z-index: 100;
     }
-    
-    .nav-section {
-        margin-bottom: 2rem;
-        padding: 0 1.5rem;
-    }
-    
-    .nav-section h3 {
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 1rem;
-        color: #aaa;
-        font-weight: 600;
-    }
-    
-    .projects-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .nav-link {
-        display: block;
-        padding: 0.75rem 0;
-        color: #ddd;
-        text-decoration: none;
-        transition: color 0.2s;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    
-    .nav-link:hover {
-        color: #fff;
-    }
-    
-    .nav-link.active {
-        color: #39FF14; /* Neon green to match the boxes */
-        font-weight: 600;
-    }
-    
-    .home-link {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-    
     /* Responsive styles */
     @media (max-width: 900px) {
         .sidebar {

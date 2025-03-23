@@ -35,7 +35,7 @@
         };
     });
 </script>
-<div class="layout " class:menu-open={isMobileMenuOpen}>
+<div class="layout" class:menu-open={isMobileMenuOpen}>
     <!-- Hamburger menu button (mobile only) -->
     <HamburgerMenu isOpen={isMobileMenuOpen} on:click={toggleMobileMenu} />
     
