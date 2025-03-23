@@ -90,7 +90,6 @@
     
     .main-content {
         width: 100%;
-        /* No margin-left */
     }
     
     .mobile-overlay {
@@ -103,8 +102,7 @@
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 90;
     }
-    
-    /* Show overlay when menu is open */
+
     .menu-open .mobile-overlay {
         display: block;
     }
