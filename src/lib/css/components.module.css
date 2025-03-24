@@ -117,16 +117,112 @@ p {
     margin-bottom: 1.5rem;
 }
 
+/* Math equations styling */
+.mathBlock {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.mathInline {
+    padding: 0 0.2rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
-    .floatImage {
-        float: none;
-        display: block;
-        width: 100%;
-        margin: 0 0 2rem 0;
+    .blogPost {
+        padding: 1rem;
     }
     
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .postMeta {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .floatImage,
+    .floatImage1 {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+    
+    /* Clear floats for mobile */
+    .postContent::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Ensure sections clear floats */
+    .postContent h1,
+    .postContent h2,
+    .postContent h3,
+    .postContent p,
+    .postContent ul,
+    .postContent ol {
+        clear: both;
+    }
+    
+    /* Fix for math equations on mobile */
+    .mathBlock {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem; /* Space for scrollbar */
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    /* Make inline equations properly responsive */
+    .mathInline {
+        max-width: 100%;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+    
+    /* Improve spacing around equation-heavy paragraphs */
+    p:has(.mathInline) {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-word;
+    }
+    
+    /* Prevent overlap with text */
+    span.mathInline {
+        display: inline-block;
+    }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
     .blogPost {
-        padding: 1.5rem;
+        padding: 0.75rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .postContent {
+        font-size: 1rem;
+    }
+    
+    /* Even smaller equation font on tiny screens */
+    .mathBlock,
+    .mathInline {
+        font-size: 0.8rem;
     }
 }
 
