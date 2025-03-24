@@ -39,5 +39,9 @@
 		"test": "npm run test:unit -- --run",
 		"postbuild": "npx svelte-sitemap --domain https://projects.parthsinha.com -o .svelte-kit/cloudflare"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"katex": "^0.16.21",
+		"svelte-katex": "^0.1.2"
+	}
 }

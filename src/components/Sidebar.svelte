@@ -9,7 +9,7 @@
     // Project links (you can pass this as a prop instead if needed)
     export let projects = [
         { id: 1, name: "WCAG Scanner", slug: "wcag-scanner" },
-        { id: 2, name: "E-commerce Dashboard", slug: "ecommerce-dashboard" },
+        { id: 2, name: "Hidden Markov Models ", slug: "hmm" },
         { id: 3, name: "Weather App", slug: "weather-app" },
         { id: 4, name: "Task Management Tool", slug: "task-management" }
     ];

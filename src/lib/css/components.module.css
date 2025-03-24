@@ -102,6 +102,15 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.floatImage1 {
+    float: left;
+    width: 800px;
+    height: auto;
+    margin: 0 2rem 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 p {
     margin-bottom: 1.5rem;
 }
