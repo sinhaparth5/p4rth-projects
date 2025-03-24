@@ -9,11 +9,12 @@
     },
     {
       "id": 2,
-      "title": "E-commerce Dashboard",
-      "description": "Admin dashboard for managing products, orders, and customers.",
+      "title": "Hidden Markov Model",
+      "description": "Using Hidden Markov Model, created model to predict stock market price.",
       "image": "https://r2.astrareconslabs.com/ai-generated-8094738_640.webp",
-      "tags": ["Svelte", "Chart.js", "Firebase"],
-      "link": "#"
+      "tags": ["Python", "HMM", "numpy", "matplotlib"],
+
+      "link": "hmm"
     },
     {
       "id": 3,
