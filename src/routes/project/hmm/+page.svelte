@@ -71,7 +71,7 @@
         observationSequenceT: "O_1, O_2, \\ldots, O_t",
         si: "S_i",
         initialization: "\\alpha_1(i) = \\pi_i b_i(O_1), \\quad i = 1, 2, \\ldots, N",
-        recursion: "\\alpha_{t+1}(j) = b_j(O_{t+1}) \\sum_{i=1}^N \\alpha_t(i) a_{ij}, \\quad t = 1, 2, \\ldots, T-1, \\quad j = 1, 2, \\ldots, N",
+        recursion: "\\begin{align} \\alpha_{t+1}(j) &= b_j(O_{t+1}) \\sum_{i=1}^N \\alpha_t(i) a_{ij}, \\\\ &\\quad t = 1, 2, \\ldots, T-1, \\\\ &\\quad j = 1, 2, \\ldots, N \\end{align}",
         termination: "P(O | \\lambda) = \\sum_{i=1}^N \\alpha_T(i)"
     };
 </script>
@@ -200,7 +200,7 @@
                 </div>
                 
                 <p><strong>Recursion:</strong></p>
-                <div class={styles.mathBlock}>
+                <div class="{styles.mathBlock} {styles.recursionEquation}">
                     <MathEquation equation={equations.recursion} displayMode={true} />
                 </div>
                 

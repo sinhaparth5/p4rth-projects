@@ -15,18 +15,18 @@
     pointer-events: none;
     z-index: -1;
     overflow: hidden;
-    background: #f8f9fa; /* Optional: adds a slight background color */
+    background: #f8f9fa;
 }
 
 .box {
     position: absolute;
     width: 300px;
     height: 300px;
-    opacity: 0.4; /* Slightly increased opacity */
-    filter: blur(12px); /* Adds a soft blur to the edges */
-    mix-blend-mode: multiply; /* Creates interesting color blending */
-    transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother transition */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    opacity: 0.4;
+    filter: blur(12px);
+    mix-blend-mode: multiply;
+    transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
 }
 
 main {
@@ -43,28 +43,29 @@ main {
     z-index: 1;
     text-align: center;
     color: #333;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 2rem;
-    backdrop-filter: blur(5px); /* Creates a frosted glass effect */
+    backdrop-filter: blur(5px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
     :global(body) {
-        background-color: #1a1a1a; /* Move background color to body instead */
+        background-color: #1a1a1a;
     }
     .content {
         color: #fff;
-        background-color: rgba(26, 26, 26, 0.7); /* Dark semi-transparent background */
+        background-color: rgba(26, 26, 26, 0.7);
     }
 }
 
 @media (prefers-color-scheme: light) {
     :global(body) {
-        background-color: #f5f5f5; /* Move background color to body instead */
+        background-color: #f5f5f5;
     }
 }
 
+/* Blog Post Styling */
 .blogPost {
     max-width: 1280px;
     margin: 0 auto;
@@ -93,6 +94,7 @@ h1 {
     font-size: 1.1rem;
 }
 
+/* Image Styling */
 .floatImage {
     float: left;
     max-width: 300px;
@@ -117,12 +119,16 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Math equations styling */
+/* Math Equation Styling */
 .mathBlock {
-    margin: 1.5rem 0;
+    margin: 0;
     overflow-x: auto;
     max-width: 100%;
     display: block;
+    position: relative;
+    padding: 0.5rem 0;
+    -webkit-overflow-scrolling: touch;
+    background-color: transparent;
 }
 
 .mathInline {
@@ -131,7 +137,30 @@ p {
     vertical-align: middle;
 }
 
-/* Mobile styles */
+/* KaTeX specific styles */
+:global(.katex-display) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem 0;
+    margin: 1.5rem 0 !important;
+    background-color: transparent;
+}
+
+:global(.katex) {
+    font-size: 1.3em;
+    text-rendering: auto;
+}
+
+:global(.katex-display .katex) {
+    white-space: normal;
+}
+
+/* Specific equation styles */
+.recursionEquation :global(.katex) {
+    font-size: 1.1em;
+}
+
+/* Tablet Screens */
 @media (max-width: 768px) {
     .blogPost {
         padding: 1rem;
@@ -157,75 +186,125 @@ p {
         margin: 0 0 1.5rem 0;
     }
     
-    /* Clear floats for mobile */
+    .postContent {
+        font-size: 1rem;
+    }
+    
+    /* Clear floats */
     .postContent::after {
         content: "";
         display: table;
         clear: both;
     }
     
-    /* Ensure sections clear floats */
-    .postContent h1,
-    .postContent h2,
-    .postContent h3,
-    .postContent p,
-    .postContent ul,
-    .postContent ol {
-        clear: both;
+    /* KaTeX adjustments for tablets */
+    :global(.katex) {
+        font-size: 1.2em;
     }
     
-    /* Fix for math equations on mobile */
-    .mathBlock {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 0.5rem; /* Space for scrollbar */
-        max-width: 100%;
-        font-size: 0.9rem;
-    }
-    
-    /* Make inline equations properly responsive */
-    .mathInline {
-        max-width: 100%;
-        vertical-align: middle;
-        white-space: nowrap;
-        font-size: 0.9rem;
-    }
-    
-    /* Improve spacing around equation-heavy paragraphs */
-    p:has(.mathInline) {
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        -ms-word-break: break-all;
-        word-break: break-word;
-    }
-    
-    /* Prevent overlap with text */
-    span.mathInline {
-        display: inline-block;
+    :global(.katex-display .katex) {
+        font-size: 1.1em;
     }
 }
 
-/* Additional styles for very small screens */
+/* Medium Mobile Screens */
+@media (max-width: 576px) {
+    .blogPost {
+        padding: 0.85rem;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .postContent {
+        font-size: 0.95rem;
+    }
+    
+    /* Further adjust KaTeX size */
+    :global(.katex) {
+        font-size: 1.1em;
+    }
+    
+    :global(.katex-display .katex) {
+        font-size: 1em;
+    }
+    
+    /* Make sure inline equations don't push text out */
+    .mathInline {
+        max-width: calc(100vw - 3rem);
+        overflow-x: auto;
+    }
+    
+    .recursionEquation :global(.katex) {
+        font-size: 0.95em;
+    }
+}
+
+/* Small Mobile Screens */
 @media (max-width: 480px) {
     .blogPost {
         padding: 0.75rem;
     }
     
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
     }
     
     .postContent {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
-    /* Even smaller equation font on tiny screens */
-    .mathBlock,
-    .mathInline {
-        font-size: 0.8rem;
+    /* Keep equations readable on small screens */
+    :global(.katex) {
+        font-size: 0.95em;
+    }
+    
+    :global(.katex-display .katex) {
+        font-size: 0.9em;
+    }
+    
+    .recursionEquation :global(.katex) {
+        font-size: 0.85em;
     }
 }
 
+/* Very Small Mobile Screens */
+@media (max-width: 360px) {
+    .blogPost {
+        padding: 0.5rem;
+    }
+    
+    :global(.katex) {
+        font-size: 0.9em;
+    }
+    
+    :global(.katex-display .katex) {
+        font-size: 0.85em;
+    }
+    
+    .postContent {
+        font-size: 0.85rem;
+    }
+    
+    .recursionEquation :global(.katex) {
+        font-size: 0.8em;
+    }
+}
+
+/* Dark Mode Adjustments */
 @media (prefers-color-scheme: dark) {
     .postMeta {
         color: #aaa;
