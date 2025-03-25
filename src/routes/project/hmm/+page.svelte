@@ -82,7 +82,7 @@
     
     <!-- Overlay for mobile menu -->
     {#if isMobileMenuOpen}
-        <div class="mobile-overlay" on:click={closeMobileMenu}></div>
+        <button class="mobile-overlay" aria-label="Hamburger navigation" on:click={closeMobileMenu}></button>
     {/if}
     
     <!-- Sidebar component -->
