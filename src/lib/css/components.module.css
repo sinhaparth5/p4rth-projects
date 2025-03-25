@@ -163,7 +163,7 @@ p {
 /* Tablet Screens */
 @media (max-width: 768px) {
     .blogPost {
-        padding: 1rem;
+        padding: 2rem 1rem 1rem 1rem;
     }
     
     h1 {
@@ -210,7 +210,7 @@ p {
 /* Medium Mobile Screens */
 @media (max-width: 576px) {
     .blogPost {
-        padding: 0.85rem;
+        padding: 3.5rem 0.85rem 0.85rem 0.85rem;
     }
     
     h1 {
@@ -248,7 +248,7 @@ p {
 /* Small Mobile Screens */
 @media (max-width: 480px) {
     .blogPost {
-        padding: 0.75rem;
+        padding: 3.5rem 0.75rem 0.75rem 0.75rem;
     }
     
     h1 {
