@@ -10,7 +10,7 @@
     export let projects = [
         { id: 1, name: "WCAG Scanner", slug: "wcag-scanner" },
         { id: 2, name: "Hidden Markov Models ", slug: "hmm" },
-        { id: 3, name: "Weather App", slug: "weather-app" },
+        { id: 3, name: "MathSnap", slug: "mathsnap" },
         { id: 4, name: "Task Management Tool", slug: "task-management" }
     ];
     

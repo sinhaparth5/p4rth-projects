@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "title": "Weather App",
-      "description": "Real-time weather application with location-based forecasts.",
+      "title": "MathSnap",
+      "description": "MathSnap is a lightweight, framework-agnostic wrapper around KaTeX",
       "image": "https://r2.astrareconslabs.com/anime-8648011_640.webp",
-      "tags": ["Svelte", "API Integration", "Geolocation"],
-      "link": "#"
+      "tags": ["Svelte", "React", "Vue", "npm"],
+      "link": "mathsnap"
     },
     {
       "id": 4,
