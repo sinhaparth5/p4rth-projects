@@ -6,11 +6,11 @@ tags:
   - Guide
 seo:
   image:
-    src: '/post-1.jpg'
-    alt: A person standing at the window
+    src: '/understanding-deep-learning.jpg'
+    alt: Paper Image by Christian Chomiak on Unsplash
 ---
 
-![A person standing at the window](/post-1.jpg)
+![Paper Image by Christian Chomiak on Unsplash](/understanding-deep-learning.jpg)
 
 **Note:** This post was created using Chat GPT to demonstrate the features of the _[Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/)_.
 
