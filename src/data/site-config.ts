@@ -101,8 +101,8 @@ const siteConfig: SiteConfig = {
         title: 'Hi There & Welcome to My Corner of the Web!',
         text: "I'm **Parth Sinha**, a driven student and freelance AI/ML and software developer with a passion for creating intelligent, user-focused solutions. I thrive at the intersection of code, creativity, and cutting-edge technology, blending curiosity, targeted research, and a strong sense of aesthetics to build impactful projects. My work is fueled by a love for innovative software, clean design, and the power of machine learning to solve real-world problems. Explore my coding journey and projects on <a href='https://github.com/sinhaparth5'>GitHub</a>, or connect with me on <a href='https://twitter.com/sinhaparth555'>Twitter/X</a> to share ideas and insights!",
         image: {
-            src: '/hero.jpeg',
-            alt: 'A person sitting at a desk in front of a computer'
+            src: '/hero-1.jpg',
+            alt: 'Photo by Trevor Vannoy on Unsplash'
         },
         actions: [
             {

@@ -1,10 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import cloudflare from '@astrojs/cloudflare';
-
 import mdx from '@astrojs/mdx';
-
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import siteConfig from './src/data/site-config';
