@@ -21,6 +21,8 @@ EcoBuddy is a revolutionary mobile application designed to make sustainable livi
 2. Utilize gamification elements to make sustainable living fun and interactive.
 3. Provide educational resources and personalized challenges to empower users to make informed eco-conscious decisions.
 
+$$ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$
+
 ## Features
 
 1. **EcoScore and Challenges:**
