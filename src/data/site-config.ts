@@ -42,10 +42,10 @@ const siteConfig: SiteConfig = {
     website: 'https://projects.parthsinha.com',
     title: 'Projects | Parth Sinha',
     subtitle: 'Projects by Parth Sinha',
-    description: 'Projects and Blogs uploaded from the Parth Sinha',
+    description: 'Im a student and junior developer intern passionate about Svelte, AI, and machine learning. Explore my journey in coding and research!',
     image: {
-        src: '/dante-preview.jpg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
+        src: '/project-preview.jpg',
+        alt: 'A student and junior developer intern exploring Svelte, AI, and machine learning through coding and research.'
     },
     headerNavLinks: [
         {
