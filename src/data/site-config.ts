@@ -77,29 +77,29 @@ const siteConfig: SiteConfig = {
         {
             text: 'Terms',
             href: '/terms'
-        },
-        {
-            text: 'Download theme',
-            href: 'https://github.com/JustGoodUI/dante-astro-theme'
         }
     ],
     socialLinks: [
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
+            text: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/parth-sinha18/'
         },
         {
             text: 'Instagram',
-            href: 'https://instagram.com/'
+            href: 'https://instagram.com/sinhparth5'
         },
         {
             text: 'X/Twitter',
-            href: 'https://twitter.com/'
+            href: 'https://x.com/sinhaparth555'
+        },
+        {
+            text: 'Medium',
+            href: 'https://parth-sinha.medium.com/'
         }
     ],
     hero: {
         title: 'Hi There & Welcome to My Corner of the Web!',
-        text: "I'm **Ethan Donovan**, a web developer at Amazing Studio, dedicated to the realms of collaboration and artificial intelligence. My approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products. I have a profound appreciation for top-notch software, visual design, and the principles of product-led growth. Feel free to explore some of my coding endeavors on <a href='https://github.com/JustGoodUI/dante-astro-theme'>GitHub</a> or follow me on <a href='https://twitter.com/justgoodui'>Twitter/X</a>.",
+        text: "I'm **Parth Sinha**, a driven student and freelance AI/ML and software developer with a passion for creating intelligent, user-focused solutions. I thrive at the intersection of code, creativity, and cutting-edge technology, blending curiosity, targeted research, and a strong sense of aesthetics to build impactful projects. My work is fueled by a love for innovative software, clean design, and the power of machine learning to solve real-world problems. Explore my coding journey and projects on <a href='https://github.com/sinhaparth5'>GitHub</a>, or connect with me on <a href='https://twitter.com/sinhaparth555'>Twitter/X</a> to share ideas and insights!",
         image: {
             src: '/hero.jpeg',
             alt: 'A person sitting at a desk in front of a computer'
