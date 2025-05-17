@@ -42,7 +42,7 @@ const siteConfig: SiteConfig = {
     website: 'https://projects.parthsinha.com',
     title: 'Projects | Parth Sinha',
     subtitle: 'Projects by Parth Sinha',
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
+    description: 'Projects and Blogs uploaded from the Parth Sinha',
     image: {
         src: '/dante-preview.jpg',
         alt: 'Dante - Astro.js and Tailwind CSS theme'
